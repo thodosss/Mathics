@@ -8,7 +8,7 @@ from mathics.builtin import (
     graphics, graphics3d, image, inout, integer, iohooks, linalg, lists, logic,
     manipulate, natlang, quantities, numbertheory, numeric, options, patterns, 
     plot, physchemdata, randomnumbers, recurrence, specialfunctions, scoping, 
-    strings, structure, system, tensors, xmlformat, optimization)
+    strings, structure, system, tensors, xmlformat, optimization,dixon)
 
 from mathics.builtin.base import (
     Builtin, SympyObject, BoxConstruct, Operator, PatternObject)
@@ -21,7 +21,7 @@ modules = [
     graphics, graphics3d, image, inout, integer, iohooks, linalg, lists, logic, 
     manipulate, natlang, quantities, numbertheory, numeric, options, patterns, 
     plot, physchemdata, randomnumbers, recurrence, specialfunctions, scoping, 
-    strings, structure, system, tensors, xmlformat, optimization]
+    strings, structure, system, tensors, xmlformat, optimization,dixon]
 
 if ENABLE_FILES_MODULE:
     from mathics.builtin import files, importexport
@@ -130,4 +130,3 @@ def contribute(definitions):
         if not definitions.have_definition(ensure_context(operator)):
             op = ensure_context(operator)
             definitions.builtin[op] = Definition(name=op)
-
